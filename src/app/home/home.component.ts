@@ -5,21 +5,20 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-list: ProdutoModel[] = [];
+  list: ProdutoModel[] = [];
 
-constructor(private produtoService: ProdutoService) {}
+  constructor(private produtoService: ProdutoService) {}
 
-ngOnInit(): void {
-  this.carregarProdutos();
-}
+  ngOnInit(): void {
+    this.carregarProdutos();
+  }
 
-private carregarProdutos(): void {
-  this.produtoService.readAll().subscribe((produtos: ProdutoModel[]) => {
-    this.list = produtos;
-  })
-}
-
+  private carregarProdutos(): void {
+    this.produtoService.readAll().subscribe((produtos: ProdutoModel[]) => {
+      this.list = produtos;
+    });
+  }
 }
