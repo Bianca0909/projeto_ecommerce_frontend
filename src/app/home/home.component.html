@@ -1,12 +1,13 @@
-<div class="card">
-  <div class="container">
-    <img src="https://www.ufmt.br/ocs/images/phocagallery/galeria2/thumbs/phoca_thumb_l_image03_grd.png" alt="Avatar">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua. Eget lorem dolor sed viverra ipsum.
-      Scelerisque felis imperdiet proin fermentum. </p>
-    <p>R$ 2.408,78</p>
-    <h2>R$ 1149,99</h2>
-    <button class="comprar">COMPRAR</button>
+   <tr *ngFor="let produto of list" class="column">
+    <div class="card">
+    <div class="container">
+    <img src="../assets/img/favorito.png" class="favorito" />
+      <td>{{ produto.imagem }}</td>
+      <td>{{ produto.nome }}</td>
+      <td>{{ produto.preco }}</td>
+      <button class="comprar">COMPRAR</button>
+    </div>
   </div>
+  </tr>
 
-</div>
+
