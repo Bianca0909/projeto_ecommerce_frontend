@@ -1,10 +1,15 @@
 .column{
+  float: left;
+  margin-right: auto;
+  margin-left: 25px;
+  display: inline-block;
 
 .card {
   background-color: white;
   width: 400px;
   height: 550px;
-  margin-left: 2%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 28px;
   border-radius: 10px;
 
