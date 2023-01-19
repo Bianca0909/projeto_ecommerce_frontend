@@ -4,9 +4,15 @@
       <div class="card">
         <img src="../assets/img/favorito.png" class="favorito" />
         <div class="container">
-          <img src= `${produto.imagem}`/>
-          <td>{{ produto.nome }}</td>
-          <td>{{ produto.preco }}</td>
+          <img src="{{ produto.imagem }}" />
+          <tr>
+            <td class="nome">{{ produto.nome }}</td>
+          </tr>
+          <tr>
+            <td class="preco">
+              {{ produto.preco | currency : 'BRL' }}
+            </td>
+          </tr>
           <button class="comprar">COMPRAR</button>
         </div>
       </div>

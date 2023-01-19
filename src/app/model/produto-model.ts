@@ -2,7 +2,7 @@ import { CategoriaModel } from "./categoria-model";
 import { MarcaModel } from "./marca-model";
 
 export interface ProdutoModel{
-  id: string;
+  id: number;
   nome: string;
   descricao: string;
   preco: number;

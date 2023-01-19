@@ -23,7 +23,7 @@ export class ProdutoService {
     return this.http.get<ProdutoModel[]>(this.url);
   }
 
-  delete(id: string): Observable<ProdutoModel> {
+  delete(id: number): Observable<ProdutoModel> {
     return this.http.delete<ProdutoModel>(this.url + `/${id}`);
   }
 
@@ -37,5 +37,9 @@ export class ProdutoService {
 
   findByFavorito(favorito: string): Observable<ProdutoModel[]> {
     return this.http.get<ProdutoModel[]>(this.url + `/${favorito}`);
+  }
+
+  findById(id: number): Observable<ProdutoModel> {
+    return this.http.get<ProdutoModel>(this.url + `/${id}`)
   }
 }

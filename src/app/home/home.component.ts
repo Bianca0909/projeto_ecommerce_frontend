@@ -16,6 +16,11 @@ export class HomeComponent implements OnInit {
     this.carregarProdutos();
   }
 
+  // favoritar(id: number) {
+  //   let produtoFavoritado = this.produtoService.findById(id);
+  //   let abc = produtoFavoritado.subscribe((p) => (p.favorito = true));
+  // }
+
   private carregarProdutos(): void {
     this.produtoService.readAll().subscribe((produtos: ProdutoModel[]) => {
       this.list = produtos;

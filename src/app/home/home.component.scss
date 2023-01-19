@@ -1,50 +1,63 @@
-.column{
+.column {
   float: left;
   margin-right: auto;
   margin-left: 25px;
   display: inline-block;
 
-.card {
-  background-color: white;
-  width: 400px;
-  height: 550px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 28px;
-  border-radius: 10px;
-
-  .favorito{
-    width: 30px;
-    height: 30px;
-    margin-right: 15px;
-    margin-left: 350px;
-    margin-top: 15px;
-  }
-
-.container {
-  width: 400px;
-  height: 550px;
-
-  img {
-    width: 300px;
-    height: 200px;
-    // display: 10px;
-    margin-left: auto;
-    margin-top: 10px;
-  }
-
-  .comprar{
-    width: 350px;
-    height: 35px;
-    margin-top: 180px;
+  .card {
+    background-color: white;
+    width: 400px;
+    height: 550px;
     margin-left: auto;
     margin-right: auto;
-    display: block;
-    background-color: #0d48a1;
-    color: white;
+    margin-top: 28px;
     border-radius: 10px;
+
+    .favorito {
+      width: 30px;
+      height: 30px;
+      margin-right: 15px;
+      margin-left: 350px;
+      margin-top: 15px;
+    }
+
+    .container {
+      width: 400px;
+      height: 550px;
+
+      img {
+        width: 300px;
+        height: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+      }
+      .nome {
+        font-size: 18px;
+        font-family: sans-serif;
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+      .preco {
+        font-size: 40px;
+        padding-top: 60px;
+        padding-left: 10px;
+        color: #0d48a1;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+      }
+      .comprar {
+        width: 350px;
+        height: 50px;
+        margin-top: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: #0d48a1;
+        color: white;
+        border-radius: 10px;
+      }
+    }
   }
 }
-}
-}
-

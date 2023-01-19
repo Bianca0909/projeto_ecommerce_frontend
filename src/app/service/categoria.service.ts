@@ -19,7 +19,7 @@ export class CategoriaService {
     return this.http.put<CategoriaModel>(this.url + `${id}`, model);
   }
 
-  delete(id: string): Observable<CategoriaModel> {
+  delete(id: number): Observable<CategoriaModel> {
     return this.http.delete<CategoriaModel>(this.url + `/${id}`);
   }
 

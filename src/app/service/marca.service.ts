@@ -19,7 +19,7 @@ export class MarcaService {
     return this.http.put<MarcaModel>(this.url + `${id}`, model);
   }
 
-  delete(id: string): Observable<MarcaModel> {
+  delete(id: number): Observable<MarcaModel> {
     return this.http.delete<MarcaModel>(this.url + `/${id}`);
   }
 
