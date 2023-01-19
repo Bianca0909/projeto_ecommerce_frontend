@@ -1,9 +1,10 @@
 <div>
   <tr *ngFor="let produto of list" class="column">
     <td>
-      <div class="card" >
+      <div class="card">
+        <img src="../assets/img/favorito.png" class="favorito" />
         <div class="container">
-          <img src="../assets/img/favorito.png" class="favorito" />
+          <img src= `${produto.imagem}`/>
           <td>{{ produto.nome }}</td>
           <td>{{ produto.preco }}</td>
           <button class="comprar">COMPRAR</button>

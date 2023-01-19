@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
   private carregarProdutos(): void {
     this.produtoService.readAll().subscribe((produtos: ProdutoModel[]) => {
       this.list = produtos;
+      console.log(this.list);
     });
   }
 }
