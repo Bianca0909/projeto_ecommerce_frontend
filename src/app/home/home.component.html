@@ -1,0 +1,21 @@
+<div>
+  <tr *ngFor="let produto of list" class="column">
+    <td>
+      <div class="card">
+        <img src="../assets/img/favorito.png" class="favorito" />
+        <div class="container">
+          <img src="{{ produto.imagem }}" />
+          <tr>
+            <td class="nome">{{ produto.nome }}</td>
+          </tr>
+          <tr>
+            <td class="preco">
+              {{ produto.preco | currency : 'BRL' }}
+            </td>
+          </tr>
+          <button class="comprar">COMPRAR</button>
+        </div>
+      </div>
+    </td>
+  </tr>
+</div>
