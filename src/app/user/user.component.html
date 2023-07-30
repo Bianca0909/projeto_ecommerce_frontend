@@ -1,0 +1,19 @@
+<div class="box-cadastro">
+<form class="form-box" >
+
+ <input
+ formControlName="login"
+ placeholder="Login"
+ type="text"
+ maxlength="64"
+ />
+ <input
+ formControlName="password"
+ placeholder="password"
+ type="text"
+ minlength="8"
+ />
+
+ <button type="submit" [disabled]="!form.valid">Cadastrar</button>
+</form>
+</div>
