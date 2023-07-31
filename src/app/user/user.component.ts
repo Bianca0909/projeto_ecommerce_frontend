@@ -1,3 +1,4 @@
+import { UserService } from './../service/user.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserModel } from '../model/user-model';
@@ -17,8 +18,19 @@ export class UserComponent {
   })
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private UserService: UserService
   ) {}
 
+    register(): void {
+      const userModel: UserModel = this.form.getRawValue();
 
+      this.UserService
+        .register(userModel)
+        .subscribe((domain: UserModel) => {
+          if (domain.id) {
+            this.form.reset();
+          }
+        });
+    }
 }

@@ -1,19 +1,23 @@
 <div class="box-cadastro">
-<form class="form-box" >
+  <form class="form-box" [formGroup]="form" (ngSubmit)="register()">
+    <input
+    formControlName="login"
+    placeholder="Login"
+    type="text"
+    maxlength="64"
+    />
+    <input
+    formControlName="password"
+    placeholder="password"
+    type="password"
+    minlength="8"
+    />
+    <input
+    formControlName="role"
+    placeholder="Role"
+    type="text"
+    />
 
- <input
- formControlName="login"
- placeholder="Login"
- type="text"
- maxlength="64"
- />
- <input
- formControlName="password"
- placeholder="password"
- type="text"
- minlength="8"
- />
-
- <button type="submit" [disabled]="!form.valid">Cadastrar</button>
-</form>
+    <button type="submit" [disabled]="!form.valid">Cadastrar</button>
+  </form>
 </div>
