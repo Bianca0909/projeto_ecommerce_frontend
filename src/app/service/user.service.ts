@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  url = 'http://localhost:8080/auth/'
+  url = 'http://localhost:8080/auth'
 
   constructor(private http: HttpClient) { }
 
   register(model: UserModel): Observable<UserModel> {
-    return this.http.post<UserModel>(this.url + 'register', model);
+    return this.http.post<UserModel>(this.url + '/register', model);
   }
 
 }

@@ -1,22 +1,44 @@
 <div class="box-cadastro">
   <form class="form-box" [formGroup]="form" (ngSubmit)="register()">
     <input
-    formControlName="login"
-    placeholder="Login"
-    type="text"
-    maxlength="64"
+      formControlName="login"
+      placeholder="Nome"
+      type="text"
+      maxlength="64"
     />
     <input
-    formControlName="password"
-    placeholder="password"
-    type="password"
-    minlength="8"
-    />
-    <input
-    formControlName="role"
-    placeholder="Role"
+    formControlName="cpfCnpj"
+    placeholder="Documento"
     type="text"
     />
+    <input
+    formControlName="email"
+    placeholder="E-mail"
+    type="email"
+    />
+    <input
+    formControlName="telefone"
+    placeholder="Telefone"
+    type="text"
+    />
+    <input
+      formControlName="password"
+      placeholder="password"
+      type="password"
+      minlength="8"
+    />
+        <input
+        formControlName="role"
+        type="radio"
+        name="role"
+        value="USER"
+        /> Pessoa física
+        <input
+        formControlName="role"
+        type="radio"
+        name="role"
+        value="ADMIN"
+         /> Pessoa jurídica
 
     <button type="submit" [disabled]="!form.valid">Cadastrar</button>
   </form>

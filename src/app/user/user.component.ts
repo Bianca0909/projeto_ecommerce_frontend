@@ -12,7 +12,10 @@ export class UserComponent {
 
   form: FormGroup = this.formBuilder.group({
     id: new FormControl(null),
-    login: new FormControl(null),
+    login: new FormControl(null,  [Validators.required, Validators.minLength(8)]),
+    cpfCpnj: new FormControl(null, [Validators.required, Validators.minLength(11)]),
+    email: new FormControl(null, [Validators.required, Validators.email]),
+    telefone: new FormControl(null, [Validators.required, Validators.minLength(9), Validators.maxLength(11)]),
     password: new FormControl(null, [Validators.required, Validators.minLength(8)]),
     role: new FormControl(null)
   })
@@ -27,10 +30,8 @@ export class UserComponent {
 
       this.UserService
         .register(userModel)
-        .subscribe((domain: UserModel) => {
-          if (domain.id) {
+        .subscribe(() => {
             this.form.reset();
-          }
         });
     }
 }
