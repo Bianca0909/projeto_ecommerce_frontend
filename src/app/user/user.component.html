@@ -1,5 +1,19 @@
 <div class="box-cadastro">
   <form class="form-box" [formGroup]="form" (ngSubmit)="register()">
+    <div class="radio">
+        <input
+        formControlName="role"
+        type="radio"
+        name="role"
+        value="USER"
+        /> Pessoa física
+        <input
+        formControlName="role"
+        type="radio"
+        name="role"
+        value="ADMIN"
+        /> Pessoa jurídica
+    </div>
     <input
       formControlName="login"
       placeholder="Nome"
@@ -27,18 +41,6 @@
       type="password"
       minlength="8"
     />
-        <input
-        formControlName="role"
-        type="radio"
-        name="role"
-        value="USER"
-        /> Pessoa física
-        <input
-        formControlName="role"
-        type="radio"
-        name="role"
-        value="ADMIN"
-         /> Pessoa jurídica
 
     <button type="submit" [disabled]="!form.valid">Cadastrar</button>
   </form>

@@ -12,10 +12,10 @@ export class UserComponent {
 
   form: FormGroup = this.formBuilder.group({
     id: new FormControl(null),
-    login: new FormControl(null,  [Validators.required, Validators.minLength(8)]),
-    cpfCpnj: new FormControl(null, [Validators.required, Validators.minLength(11)]),
+    login: new FormControl(null),
+    cpfCnpj: new FormControl(null),
     email: new FormControl(null, [Validators.required, Validators.email]),
-    telefone: new FormControl(null, [Validators.required, Validators.minLength(9), Validators.maxLength(11)]),
+    telefone: new FormControl(null),
     password: new FormControl(null, [Validators.required, Validators.minLength(8)]),
     role: new FormControl(null)
   })
