@@ -2,12 +2,14 @@
   <form class="form-box" [formGroup]="form" (ngSubmit)="register()">
     <div class="radio">
         <input
+        class="pessoaFisica"
         formControlName="role"
         type="radio"
         name="role"
         value="USER"
         /> Pessoa física
         <input
+        class="pessoaJuridica"
         formControlName="role"
         type="radio"
         name="role"
@@ -15,33 +17,32 @@
         /> Pessoa jurídica
     </div>
     <input
+      class="login"
       formControlName="login"
       placeholder="Nome"
       type="text"
       maxlength="64"
     />
     <input
+    class="cpfCnpj"
     formControlName="cpfCnpj"
     placeholder="Documento"
     type="text"
     />
     <input
-    formControlName="email"
-    placeholder="E-mail"
-    type="email"
-    />
-    <input
+    class="telefone"
     formControlName="telefone"
     placeholder="Telefone"
     type="text"
     />
     <input
+      class="password"
       formControlName="password"
       placeholder="password"
       type="password"
       minlength="8"
     />
 
-    <button type="submit" [disabled]="!form.valid">Cadastrar</button>
+    <button type="submit" [disabled]="!form.valid" class="cadastrar">Cadastrar</button>
   </form>
 </div>

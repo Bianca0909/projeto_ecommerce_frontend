@@ -1,11 +1,23 @@
-.form-box {
-  margin-left: 50%;
-  margin-right: 50%;
-  margin-top: 10px;
-
+.box-cadastro {
+  margin-left: 37%;
+  margin-right: 70%;
+  margin-top: 20px;
 }
+
 .radio {
   display: flex;
-
+  margin-bottom: 15px;
+  width: 250px;
+  margin-left: 55px;
+  color: #ccc
 }
 
+.login, .cpfCnpj, .email, .telefone, .password {
+  margin-bottom: 15px;
+  width: 350px;
+  height: 40px;
+}
+
+.cadastrar {
+  margin-left: 150px;
+}
