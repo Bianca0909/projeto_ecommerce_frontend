@@ -13,10 +13,11 @@ import ptBr from '@angular/common/locales/pt';
 import { UserComponent } from './user/user.component';
 import { UserModule } from './user/user.module';
 import { AuthComponent } from './auth/auth.component';
+import { AuthModule } from './auth/auth.module';
 
 registerLocaleData(ptBr);
 @NgModule({
-  declarations: [AppComponent, AuthComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -26,7 +27,8 @@ registerLocaleData(ptBr);
     MarcaModule,
     HomeModule,
     MenuModule,
-    UserModule
+    UserModule,
+    AuthModule
   ],
   providers: [
     {provide: LOCALE_ID, useValue: 'pt'}

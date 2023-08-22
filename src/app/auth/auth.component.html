@@ -1,1 +1,19 @@
-<p>auth works!</p>
+<div class="login-box">
+  <form class="form-box" [formGroup]="form" (ngSubmit)="signIn()">
+    <div>
+      <input
+      class="email"
+      type="email"
+      formControlName="email"
+      placeholder="E-mail"
+      />
+      <input
+      class="password"
+      type="password"
+      formControlName="password"
+      placeholder="Senha"
+      />
+      <button type="submit" [disabled]="!form.valid" class="entrar">Entrar</button>
+    </div>
+  </form>
+</div>
