@@ -1,3 +1,4 @@
+import { LoginResponseModel } from './../model/login-response-model';
 import { AuthService } from './../service/auth.service';
 import { Component } from '@angular/core';
 import {
@@ -14,6 +15,8 @@ import { AuthModel } from '../model/auth-model';
   styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent {
+  private readonly TOKEN_KEY = 'auth_token';
+
   form: FormGroup = this.formBuilder.group({
     email: new FormControl(null, [Validators.required, Validators.email]),
     password: new FormControl(null),
@@ -27,8 +30,13 @@ export class AuthComponent {
   signIn(): void {
     const authModel: AuthModel = this.form.getRawValue();
 
-    this.authService.signIn(authModel).subscribe(() => {
+    this.authService.signIn(authModel).subscribe((response) => {
+      localStorage.setItem(this.TOKEN_KEY, JSON.stringify(response.token));
       this.form.reset();
     });
+  }
+
+  signOut(item: LoginResponseModel): void {
+    localStorage.removeItem(item.token);
   }
 }
